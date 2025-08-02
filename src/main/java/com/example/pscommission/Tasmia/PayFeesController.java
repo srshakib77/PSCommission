@@ -1,6 +1,6 @@
 package com.example.pscommission.Tasmia;
 
-public class CandidateController
+public class PayFeesController
 {
     @javafx.fxml.FXML
     public void initialize() {
