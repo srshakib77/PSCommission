@@ -1,14 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.pscommission.Shafin.OverseeAnswerScriptCollections"
-            prefHeight="400.0" prefWidth="600.0">
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="your.package.AnswerScriptCollectionController"
+      spacing="10" alignment="TOP_CENTER">
 
-</AnchorPane>
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Oversee Answer Script Collection" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+    <!-- Step 2: Plan Collection Schedule -->
+    <TextField fx:id="txtCollectionDate" promptText="Enter Collection Date" />
+    <TextField fx:id="txtCollectionTime" promptText="Enter Collection Time" />
+    <Button text="Schedule Collection" fx:id="btnSchedule" />
+
+    <!-- Step 3: Assign Teams (simulated output) -->
+    <Label fx:id="lblTeamsAssigned" text="Collection teams assigned to all centers." />
+
+    <!-- Step 4: Collect Scripts -->
+    <Label fx:id="lblScriptStatus" text="Scripts from all centers received." />
+
+    <!-- Step 5: Verify Collection -->
+    <TextField fx:id="txtVerifyCollection" promptText="Enter Verification Code or ID" />
+    <Button text="Verify Collection" fx:id="btnVerify" />
+
+    <!-- Step 6: Store Securely -->
+    <Button text="Store Scripts Securely" fx:id="btnStore" />
+
+    <!-- Step 7: Return -->
+    <Button text="Return to Dashboard" fx:id="btnReturn" style="-fx-background-color: #ccccff;" />
+
+</VBox>
+

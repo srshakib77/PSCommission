@@ -1,14 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.pscommission.Shafin.MonitorNetworkPerformance"
-            prefHeight="400.0" prefWidth="600.0">
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="your.package.PrepareScheduleController"
+      spacing="10" alignment="TOP_CENTER">
 
-</AnchorPane>
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Prepare Examination Schedule" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+    <!-- Step 2: Draft Schedule -->
+    <TextField fx:id="txtPreliminaryDraft" promptText="Enter draft schedule here" />
+    <Button text="Submit Draft" fx:id="btnSubmitDraft" />
+
+    <!-- Step 3: Collect department inputs (output label) -->
+    <Label text="Department Inputs: Math: 10am, Physics: 1pm" fx:id="lblDeptInputs" />
+
+    <!-- Step 4: Finalize Draft -->
+    <TextArea fx:id="txtFinalSchedule" promptText="Finalize schedule here..." prefRowCount="4" />
+    <Button text="Save Final Draft" fx:id="btnSaveFinal" />
+
+    <!-- Step 5: Approval (Output simulation) -->
+    <Label text="Status: Approved by Head of Exam Division" fx:id="lblApprovalStatus" />
+
+    <!-- Step 6: Publish Schedule -->
+    <Button text="Publish Schedule" fx:id="btnPublish" />
+
+    <!-- Step 7: Return -->
+    <Button text="Return to Dashboard" fx:id="btnReturn" style="-fx-background-color: #ccccff;" />
+
+</VBox>

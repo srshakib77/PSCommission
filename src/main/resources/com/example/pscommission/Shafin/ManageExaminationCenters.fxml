@@ -1,14 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.pscommission.Shafin.ManageExaminationCenters"
-            prefHeight="400.0" prefWidth="600.0">
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="your.package.ManageExamCentersController"
+      spacing="10" alignment="TOP_CENTER">
 
-</AnchorPane>
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Manage Examination Centers" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+    <!-- Step 2 & 3: Display identified centers and inspection -->
+    <Label text="Available Centers:" />
+    <ListView fx:id="listCenters" prefHeight="100" />
+
+    <Label text="Inspection Notes:" />
+    <TextArea fx:id="txtInspectionNotes" prefRowCount="3" />
+
+    <!-- Step 4: Assign Center -->
+    <Label text="Assign Center:" />
+    <TextField fx:id="txtAssignCenter" promptText="Enter Center ID or Name" />
+    <Button text="Assign to Schedule" fx:id="btnAssign" />
+
+    <!-- Step 5: Communicate assignment details -->
+    <Button text="Send Notification to Centers" fx:id="btnNotify" />
+
+    <!-- Step 6: Monitor Centers -->
+    <Label fx:id="lblMonitoring" text="Live status: All centers are being monitored." />
+
+    <!-- Step 7: Return -->
+    <Button text="Return to Dashboard" fx:id="btnReturn" style="-fx-background-color: #ccccff;" />
+
+</VBox>
