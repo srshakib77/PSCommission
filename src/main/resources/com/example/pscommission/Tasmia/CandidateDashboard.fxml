@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="425.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pscommission.Tasmia.CandidateDashboardController">
+   <children>
+      <Label layoutX="254.0" layoutY="22.0" />
+      <Label layoutX="137.0" layoutY="22.0" text="Candidate Dashboard">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Label>
+      <Button layoutX="26.0" layoutY="92.0" mnemonicParsing="false" onAction="#createaccountbuttononaction" text="Create Account" />
+      <Button layoutX="26.0" layoutY="139.0" mnemonicParsing="false" onAction="#viewsexambuttononaction" text="Views Exam" />
+      <Button layoutX="23.0" layoutY="187.0" mnemonicParsing="false" onAction="#applyonlinebuttononaction" text="Apply Online" />
+      <Button layoutX="26.0" layoutY="224.0" mnemonicParsing="false" onAction="#payfeesbuttononaction" text="Pay Fees " />
+      <Button layoutX="26.0" layoutY="264.0" mnemonicParsing="false" onAction="#downloadadmitcardbuttononaction" text="Download Admit Card" />
+      <Button layoutX="20.0" layoutY="347.0" mnemonicParsing="false" onAction="#seeresultsbuttononaction" text="See Results" />
+      <Button layoutX="26.0" layoutY="385.0" mnemonicParsing="false" onAction="#printcertificatebuttononaction" text="Print Certificate" />
+      <Button layoutX="26.0" layoutY="308.0" mnemonicParsing="false" onAction="#checkexamdatebuttononaction" text="Check Exam Date" />
+   </children>
+</AnchorPane>
