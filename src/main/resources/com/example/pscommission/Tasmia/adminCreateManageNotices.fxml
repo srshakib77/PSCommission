@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="547.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pscommission.Tasmia.adminadminCreateManageNoticesViewController">
+    <children>
+        <Label layoutX="370.0" layoutY="30.0" text="Create/Manage Notices">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="50.0" layoutY="80.0" text="Create New Notice:">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="50.0" layoutY="110.0" text="Notice Title:" />
+        <TextField layoutX="130.0" layoutY="105.0" prefHeight="30.0" prefWidth="300.0" />
+        <Label layoutX="450.0" layoutY="110.0" text="Category:" />
+        <ComboBox layoutX="510.0" layoutY="105.0" prefHeight="30.0" prefWidth="150.0" promptText="Select category" />
+        <Label layoutX="680.0" layoutY="110.0" text="Priority:" />
+        <ComboBox layoutX="730.0" layoutY="105.0" prefHeight="30.0" prefWidth="100.0" promptText="Priority" />
+        <Label layoutX="50.0" layoutY="150.0" text="Notice Content:" />
+        <TextArea layoutX="50.0" layoutY="170.0" prefHeight="80.0" prefWidth="780.0" promptText="Enter notice content" />
+        <Label layoutX="50.0" layoutY="270.0" text="Publish Date:" />
+        <DatePicker layoutX="140.0" layoutY="265.0" prefHeight="30.0" prefWidth="150.0" />
+        <Label layoutX="310.0" layoutY="270.0" text="Expiry Date:" />
+        <DatePicker layoutX="380.0" layoutY="265.0" prefHeight="30.0" prefWidth="150.0" />
+        <Button layoutX="550.0" layoutY="265.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Save Draft" />
+        <Button layoutX="670.0" layoutY="265.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Publish Notice" />
+        <Label layoutX="50.0" layoutY="320.0" text="Existing Notices:">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <TableView layoutX="50.0" layoutY="350.0" prefHeight="150.0" prefWidth="820.0">
+            <columns>
+                <TableColumn prefWidth="250.0" text="Notice Title" />
+                <TableColumn prefWidth="100.0" text="Category" />
+                <TableColumn prefWidth="100.0" text="Publish Date" />
+                <TableColumn prefWidth="100.0" text="Expiry Date" />
+                <TableColumn prefWidth="80.0" text="Status" />
+                <TableColumn prefWidth="90.0" text="Priority" />
+                <TableColumn prefWidth="100.0" text="Actions" />
+            </columns>
+        </TableView>
+        <Button layoutX="50.0" layoutY="510.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Edit Notice" />
+        <Button layoutX="170.0" layoutY="510.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Delete Notice" />
+        <Button layoutX="290.0" layoutY="510.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Archive Notice" />
+        <Button layoutX="410.0" layoutY="510.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Duplicate Notice" />
+        <Button layoutX="530.0" layoutY="510.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="View Analytics" />
+    </children>
+</AnchorPane>

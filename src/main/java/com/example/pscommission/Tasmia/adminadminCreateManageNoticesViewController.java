@@ -1,6 +1,6 @@
 package com.example.pscommission.Tasmia;
 
-public class AdminStaffDashboardController
+public class adminadminCreateManageNoticesViewController
 {
     @javafx.fxml.FXML
     public void initialize() {

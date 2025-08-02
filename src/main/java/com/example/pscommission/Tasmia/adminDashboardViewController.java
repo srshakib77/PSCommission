@@ -1,6 +1,6 @@
 package com.example.pscommission.Tasmia;
 
-public class ApplyOnlineController
+public class adminDashboardViewController
 {
     @javafx.fxml.FXML
     public void initialize() {
