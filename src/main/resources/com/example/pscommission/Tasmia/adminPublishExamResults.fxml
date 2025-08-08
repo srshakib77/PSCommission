@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="547.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pscommission.Tasmia.adminadminPublishExamResultsViewController">
+<AnchorPane prefHeight="547.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pscommission.Tasmia.adminadminPublishExamResultsViewController">
     <children>
         <Label layoutX="370.0" layoutY="30.0" text="Publish Exam Results">
             <font>
@@ -22,25 +22,25 @@
             </font>
         </Label>
         <Label layoutX="50.0" layoutY="110.0" text="Exam Name:" />
-        <ComboBox layoutX="130.0" layoutY="105.0" prefHeight="30.0" prefWidth="250.0" promptText="Select exam" />
+        <ComboBox fx:id="examnamecombobox" layoutX="130.0" layoutY="105.0" prefHeight="30.0" prefWidth="250.0" promptText="Select exam" />
         <Label layoutX="400.0" layoutY="110.0" text="Exam Date:" />
-        <TextField layoutX="470.0" layoutY="105.0" editable="false" prefHeight="30.0" prefWidth="150.0" />
-        <Button layoutX="640.0" layoutY="105.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Load Results" />
+        <TextField fx:id="examdatetextfield" editable="false" layoutX="470.0" layoutY="105.0" prefHeight="30.0" prefWidth="150.0" />
+        <Button layoutX="640.0" layoutY="105.0" mnemonicParsing="false" onAction="#loadresultsbuttononaction" prefHeight="30.0" prefWidth="100.0" text="Load Results" />
         <Label layoutX="50.0" layoutY="160.0" text="Exam Results Summary:">
             <font>
                 <Font name="System Bold" size="14.0" />
             </font>
         </Label>
-        <TableView layoutX="50.0" layoutY="190.0" prefHeight="250.0" prefWidth="820.0">
+        <TableView fx:id="examresultssummarytableview" layoutX="50.0" layoutY="190.0" prefHeight="250.0" prefWidth="820.0">
             <columns>
-                <TableColumn prefWidth="120.0" text="Roll Number" />
-                <TableColumn prefWidth="150.0" text="Candidate Name" />
-                <TableColumn prefWidth="100.0" text="Marks Obtained" />
-                <TableColumn prefWidth="100.0" text="Total Marks" />
-                <TableColumn prefWidth="80.0" text="Percentage" />
-                <TableColumn prefWidth="100.0" text="Result Status" />
-                <TableColumn prefWidth="80.0" text="Rank" />
-                <TableColumn prefWidth="90.0" text="Grade" />
+                <TableColumn fx:id="rollnumbercol" prefWidth="120.0" text="Roll Number" />
+                <TableColumn fx:id="candidatenamecol" prefWidth="150.0" text="Candidate Name" />
+                <TableColumn fx:id="marksobtainedcol" prefWidth="100.0" text="Marks Obtained" />
+                <TableColumn fx:id="totalmarkscol" prefWidth="100.0" text="Total Marks" />
+                <TableColumn fx:id="percentagecol" prefWidth="80.0" text="Percentage" />
+                <TableColumn fx:id="resultstatuscol" prefWidth="100.0" text="Result Status" />
+                <TableColumn fx:id="rankcol" prefWidth="80.0" text="Rank" />
+                <TableColumn fx:id="gradecol" prefWidth="90.0" text="Grade" />
             </columns>
         </TableView>
         <Label layoutX="50.0" layoutY="460.0" text="Publication Settings:">
@@ -49,14 +49,14 @@
             </font>
         </Label>
         <Label layoutX="50.0" layoutY="485.0" text="Cut-off Marks:" />
-        <TextField layoutX="140.0" layoutY="480.0" prefHeight="30.0" prefWidth="100.0" />
+        <TextField fx:id="cutoffmarkstextfield" layoutX="140.0" layoutY="480.0" prefHeight="30.0" prefWidth="100.0" />
         <Label layoutX="260.0" layoutY="485.0" text="Pass Percentage:" />
-        <TextField layoutX="360.0" layoutY="480.0" prefHeight="30.0" prefWidth="100.0" />
-        <Button layoutX="480.0" layoutY="480.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Calculate Ranks" />
-        <Button layoutX="600.0" layoutY="480.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Preview Results" />
-        <Button layoutX="720.0" layoutY="480.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Publish Results" />
-        <Button layoutX="50.0" layoutY="520.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="Export Results" />
-        <Button layoutX="190.0" layoutY="520.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="Generate Certificates" />
-        <Button layoutX="330.0" layoutY="520.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="Send Notifications" />
+        <TextField fx:id="passpercentagetextfield" layoutX="360.0" layoutY="480.0" prefHeight="30.0" prefWidth="100.0" />
+        <Button layoutX="480.0" layoutY="480.0" mnemonicParsing="false" onAction="#calculateranksbuttononaction" prefHeight="30.0" prefWidth="100.0" text="Calculate Ranks" />
+        <Button layoutX="600.0" layoutY="480.0" mnemonicParsing="false" onAction="#previewresultsbuttononaction" prefHeight="30.0" prefWidth="100.0" text="Preview Results" />
+        <Button layoutX="720.0" layoutY="480.0" mnemonicParsing="false" onAction="#publishresultsbuttononaction" prefHeight="30.0" prefWidth="100.0" text="Publish Results" />
+        <Button layoutX="50.0" layoutY="520.0" mnemonicParsing="false" onAction="#exportresultsbuttononaction" prefHeight="25.0" prefWidth="120.0" text="Export Results" />
+        <Button layoutX="190.0" layoutY="520.0" mnemonicParsing="false" onAction="#generatecertificatesbuttononaction" prefHeight="25.0" prefWidth="120.0" text="Generate Certificates" />
+        <Button layoutX="330.0" layoutY="520.0" mnemonicParsing="false" onAction="#sendnotificationsbuttononaction" prefHeight="25.0" prefWidth="120.0" text="Send Notifications" />
     </children>
 </AnchorPane>

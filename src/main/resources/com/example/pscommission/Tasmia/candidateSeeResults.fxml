@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="547.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pscommission.Tasmia.candidateSeeResultsViewController">
+<AnchorPane prefHeight="547.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pscommission.Tasmia.candidateSeeResultsViewController">
     <children>
         <Label layoutX="410.0" layoutY="30.0" text="See Results">
             <font>
@@ -21,30 +21,30 @@
             </font>
         </Label>
         <Label layoutX="50.0" layoutY="110.0" text="Application Number:" />
-        <TextField layoutX="180.0" layoutY="105.0" prefHeight="30.0" prefWidth="200.0" promptText="Enter application number" />
+        <TextField fx:id="applicationnumbertextfield" layoutX="180.0" layoutY="105.0" prefHeight="30.0" prefWidth="200.0" promptText="Enter application number" />
         <Label layoutX="400.0" layoutY="110.0" text="Roll Number:" />
-        <TextField layoutX="490.0" layoutY="105.0" prefHeight="30.0" prefWidth="200.0" promptText="Enter roll number" />
+        <TextField fx:id="rollnumbertextfield" layoutX="490.0" layoutY="105.0" prefHeight="30.0" prefWidth="200.0" promptText="Enter roll number" />
         <Button layoutX="710.0" layoutY="105.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="Search" />
         <Label layoutX="50.0" layoutY="160.0" text="Exam Results:">
             <font>
                 <Font name="System Bold" size="14.0" />
             </font>
         </Label>
-        <TableView layoutX="50.0" layoutY="190.0" prefHeight="280.0" prefWidth="820.0">
+        <TableView fx:id="examresultstableview" layoutX="50.0" layoutY="190.0" prefHeight="280.0" prefWidth="820.0">
             <columns>
-                <TableColumn prefWidth="200.0" text="Exam Name" />
-                <TableColumn prefWidth="120.0" text="Roll Number" />
-                <TableColumn prefWidth="100.0" text="Marks Obtained" />
-                <TableColumn prefWidth="100.0" text="Total Marks" />
-                <TableColumn prefWidth="100.0" text="Percentage" />
-                <TableColumn prefWidth="100.0" text="Result Status" />
-                <TableColumn prefWidth="100.0" text="Rank" />
+                <TableColumn fx:id="examnamecol" prefWidth="200.0" text="Exam Name" />
+                <TableColumn fx:id="rollnumbercol" prefWidth="120.0" text="Roll Number" />
+                <TableColumn fx:id="marksobtainedcol" prefWidth="100.0" text="Marks Obtained" />
+                <TableColumn fx:id="totalmarkscol" prefWidth="100.0" text="Total Marks" />
+                <TableColumn fx:id="percentagecol" prefWidth="100.0" text="Percentage" />
+                <TableColumn fx:id="resultstatuscol" prefWidth="100.0" text="Result Status" />
+                <TableColumn fx:id="rankcol" prefWidth="100.0" text="Rank" />
             </columns>
         </TableView>
-        <Button layoutX="50.0" layoutY="490.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" text="Download Result" />
-        <Button layoutX="190.0" layoutY="490.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" text="View Detailed Report" />
-        <Button layoutX="330.0" layoutY="490.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" text="Print Result" />
-        <Button layoutX="470.0" layoutY="490.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" text="Appeal Process" />
-        <Button layoutX="610.0" layoutY="490.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" text="Refresh" />
+        <Button layoutX="50.0" layoutY="490.0" mnemonicParsing="false" onAction="#downloadresultbuttononaction" prefHeight="35.0" prefWidth="120.0" text="Download Result" />
+        <Button layoutX="190.0" layoutY="490.0" mnemonicParsing="false" onAction="#viewdetailedreportbuttononaction" prefHeight="35.0" prefWidth="120.0" text="View Detailed Report" />
+        <Button layoutX="330.0" layoutY="490.0" mnemonicParsing="false" onAction="#printresultsbuttononaction" prefHeight="35.0" prefWidth="120.0" text="Print Result" />
+        <Button layoutX="470.0" layoutY="490.0" mnemonicParsing="false" onAction="#appealprocessbuttononaction" prefHeight="35.0" prefWidth="120.0" text="Appeal Process" />
+        <Button layoutX="610.0" layoutY="490.0" mnemonicParsing="false" onAction="#refreshbuttononaction" prefHeight="35.0" prefWidth="120.0" text="Refresh" />
     </children>
 </AnchorPane>

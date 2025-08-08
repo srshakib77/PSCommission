@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="547.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pscommission.Tasmia.adminManageLoginProfileViewController">
+<AnchorPane prefHeight="547.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pscommission.Tasmia.adminManageLoginProfileViewController">
     <children>
         <Label layoutX="350.0" layoutY="30.0" text="Management Login and Profile">
             <font>
@@ -22,37 +22,37 @@
             </font>
         </Label>
         <Label layoutX="50.0" layoutY="110.0" text="Full Name:" />
-        <TextField layoutX="130.0" layoutY="105.0" prefHeight="30.0" prefWidth="200.0" />
+        <TextField fx:id="nametextfield" layoutX="130.0" layoutY="105.0" prefHeight="30.0" prefWidth="200.0" />
         <Label layoutX="350.0" layoutY="110.0" text="Employee ID:" />
-        <TextField layoutX="440.0" layoutY="105.0" prefHeight="30.0" prefWidth="150.0" />
+        <TextField fx:id="employeeidtextfield" layoutX="440.0" layoutY="105.0" prefHeight="30.0" prefWidth="150.0" />
         <Label layoutX="50.0" layoutY="150.0" text="Email:" />
-        <TextField layoutX="100.0" layoutY="145.0" prefHeight="30.0" prefWidth="230.0" />
+        <TextField fx:id="emailtextfield" layoutX="100.0" layoutY="145.0" prefHeight="30.0" prefWidth="230.0" />
         <Label layoutX="350.0" layoutY="150.0" text="Department:" />
-        <TextField layoutX="430.0" layoutY="145.0" prefHeight="30.0" prefWidth="160.0" />
+        <TextField fx:id="departmenttextfield" layoutX="430.0" layoutY="145.0" prefHeight="30.0" prefWidth="160.0" />
         <Label layoutX="50.0" layoutY="190.0" text="Current Password:" />
-        <PasswordField layoutX="170.0" layoutY="185.0" prefHeight="30.0" prefWidth="160.0" />
+        <PasswordField fx:id="currentpasswordfield" layoutX="170.0" layoutY="185.0" prefHeight="30.0" prefWidth="160.0" />
         <Label layoutX="350.0" layoutY="190.0" text="New Password:" />
-        <PasswordField layoutX="450.0" layoutY="185.0" prefHeight="30.0" prefWidth="160.0" />
-        <Button layoutX="50.0" layoutY="230.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" text="Update Profile" />
-        <Button layoutX="190.0" layoutY="230.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" text="Change Password" />
-        <Button layoutX="330.0" layoutY="230.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" text="Reset Security" />
+        <PasswordField fx:id="newpasswordfield" layoutX="450.0" layoutY="185.0" prefHeight="30.0" prefWidth="160.0" />
+        <Button layoutX="50.0" layoutY="230.0" mnemonicParsing="false" onAction="#updateprofilebuttononaction" prefHeight="35.0" prefWidth="120.0" text="Update Profile" />
+        <Button layoutX="190.0" layoutY="230.0" mnemonicParsing="false" onAction="#changepasswordbuttononaction" prefHeight="35.0" prefWidth="120.0" text="Change Password" />
+        <Button layoutX="330.0" layoutY="230.0" mnemonicParsing="false" onAction="#resetsecuritybuttononaction" prefHeight="35.0" prefWidth="120.0" text="Reset Security" />
         <Label layoutX="50.0" layoutY="290.0" text="Active Admin Sessions:">
             <font>
                 <Font name="System Bold" size="14.0" />
             </font>
         </Label>
-        <TableView layoutX="50.0" layoutY="320.0" prefHeight="150.0" prefWidth="820.0">
+        <TableView fx:id="activeadminsessionstableview" layoutX="50.0" layoutY="320.0" prefHeight="150.0" prefWidth="820.0">
             <columns>
-                <TableColumn prefWidth="200.0" text="Admin Name" />
-                <TableColumn prefWidth="150.0" text="Login Time" />
-                <TableColumn prefWidth="120.0" text="IP Address" />
-                <TableColumn prefWidth="150.0" text="Last Activity" />
-                <TableColumn prefWidth="100.0" text="Status" />
-                <TableColumn prefWidth="100.0" text="Actions" />
+                <TableColumn fx:id="adminnamecol" prefWidth="200.0" text="Admin Name" />
+                <TableColumn fx:id="logintimecol" prefWidth="150.0" text="Login Time" />
+                <TableColumn fx:id="ipaddresscol" prefWidth="120.0" text="IP Address" />
+                <TableColumn fx:id="lastactivitycol" prefWidth="150.0" text="Last Activity" />
+                <TableColumn fx:id="statuscol" prefWidth="100.0" text="Status" />
+                <TableColumn fx:id="actionscol" prefWidth="100.0" text="Actions" />
             </columns>
         </TableView>
-        <Button layoutX="50.0" layoutY="490.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" text="View Audit Log" />
-        <Button layoutX="190.0" layoutY="490.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" text="Manage Permissions" />
-        <Button layoutX="330.0" layoutY="490.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" text="Force Logout All" />
+        <Button layoutX="50.0" layoutY="490.0" mnemonicParsing="false" onAction="#viewauditlogbuttononaction" prefHeight="35.0" prefWidth="120.0" text="View Audit Log" />
+        <Button layoutX="190.0" layoutY="490.0" mnemonicParsing="false" onAction="#managepermissionsbuttononaction" prefHeight="35.0" prefWidth="120.0" text="Manage Permissions" />
+        <Button layoutX="330.0" layoutY="490.0" mnemonicParsing="false" onAction="#forcelogoutallbuttononaction" prefHeight="35.0" prefWidth="120.0" text="Force Logout All" />
     </children>
 </AnchorPane>

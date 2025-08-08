@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="547.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pscommission.Tasmia.candidateCheckExamDateViewController">
+<AnchorPane prefHeight="547.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pscommission.Tasmia.candidateCheckExamDateViewController">
     <children>
-        <Label layoutX="390.0" layoutY="30.0" text="Check Exam Date">
+        <Label layoutX="332.0" layoutY="31.0" text="Check Exam Date">
             <font>
                 <Font name="System Bold" size="24.0" />
             </font>
@@ -22,30 +22,30 @@
             </font>
         </Label>
         <Label layoutX="50.0" layoutY="110.0" text="Exam Name:" />
-        <TextField layoutX="130.0" layoutY="105.0" prefHeight="30.0" prefWidth="200.0" promptText="Enter exam name" />
+        <TextField fx:id="examnametextfield" layoutX="130.0" layoutY="105.0" prefHeight="30.0" prefWidth="200.0" promptText="Enter exam name" />
         <Label layoutX="350.0" layoutY="110.0" text="Date Range:" />
-        <DatePicker layoutX="430.0" layoutY="105.0" prefHeight="30.0" prefWidth="150.0" />
+        <DatePicker fx:id="daterangetextfield" layoutX="430.0" layoutY="105.0" prefHeight="30.0" prefWidth="150.0" />
         <Label layoutX="590.0" layoutY="110.0" text="to" />
-        <DatePicker layoutX="610.0" layoutY="105.0" prefHeight="30.0" prefWidth="150.0" />
-        <Button layoutX="780.0" layoutY="105.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="Search" />
+        <DatePicker fx:id="daterange2textfield" layoutX="610.0" layoutY="105.0" prefHeight="30.0" prefWidth="150.0" />
+        <Button layoutX="780.0" layoutY="105.0" mnemonicParsing="false" onAction="#searchbuttononaction" prefHeight="30.0" prefWidth="80.0" text="Search" />
         <Label layoutX="50.0" layoutY="160.0" text="Upcoming Exam Schedule:">
             <font>
                 <Font name="System Bold" size="14.0" />
             </font>
         </Label>
-        <TableView layoutX="50.0" layoutY="190.0" prefHeight="280.0" prefWidth="820.0">
+        <TableView fx:id="upcomingexamscheduletableview" layoutX="50.0" layoutY="190.0" prefHeight="280.0" prefWidth="820.0">
             <columns>
-                <TableColumn prefWidth="250.0" text="Exam Name" />
-                <TableColumn prefWidth="120.0" text="Exam Date" />
-                <TableColumn prefWidth="100.0" text="Start Time" />
-                <TableColumn prefWidth="100.0" text="End Time" />
-                <TableColumn prefWidth="150.0" text="Exam Center" />
-                <TableColumn prefWidth="100.0" text="Status" />
+                <TableColumn fx:id="examnamecol" prefWidth="193.60003662109375" text="Exam Name" />
+                <TableColumn fx:id="examdatecol" prefWidth="176.79998779296875" text="Exam Date" />
+                <TableColumn fx:id="starttimecol" prefWidth="100.0" text="Start Time" />
+                <TableColumn fx:id="endtimecol" prefWidth="100.0" text="End Time" />
+                <TableColumn fx:id="examcentercol" prefWidth="150.0" text="Exam Center" />
+                <TableColumn fx:id="statuscol" prefWidth="100.0" text="Status" />
             </columns>
         </TableView>
-        <Button layoutX="50.0" layoutY="490.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" text="Export Schedule" />
-        <Button layoutX="190.0" layoutY="490.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" text="Set Reminder" />
-        <Button layoutX="330.0" layoutY="490.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" text="View Calendar" />
-        <Button layoutX="470.0" layoutY="490.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" text="Refresh" />
+        <Button layoutX="50.0" layoutY="490.0" mnemonicParsing="false" onAction="#exportschedulebuttononaction" prefHeight="35.0" prefWidth="120.0" text="Export Schedule" />
+        <Button layoutX="190.0" layoutY="490.0" mnemonicParsing="false" onAction="#setreminderbuttononaction" prefHeight="35.0" prefWidth="120.0" text="Set Reminder" />
+        <Button layoutX="330.0" layoutY="490.0" mnemonicParsing="false" onAction="#viewcalendarbuttononaction" prefHeight="35.0" prefWidth="120.0" text="View Calendar" />
+        <Button layoutX="470.0" layoutY="490.0" mnemonicParsing="false" onAction="#refreshbuttononaction" prefHeight="35.0" prefWidth="120.0" text="Refresh" />
     </children>
 </AnchorPane>

@@ -7,9 +7,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="547.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pscommission.Tasmia.adminDashboardViewController">
+<AnchorPane prefHeight="528.0" prefWidth="657.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pscommission.Tasmia.adminDashboardViewController">
     <children>
-        <Label layoutX="380.0" layoutY="30.0" text="Admin Dashboard">
+        <Label layoutX="268.0" layoutY="32.0" text="Admin Dashboard">
             <font>
                 <Font name="System Bold" size="24.0" />
             </font>
@@ -27,21 +27,21 @@
         <Label layoutX="50.0" layoutY="150.0" text="Total Applications: 1,245" />
         <Label layoutX="250.0" layoutY="150.0" text="Pending Approvals: 89" />
         <Label layoutX="450.0" layoutY="150.0" text="Active Exams: 12" />
-        <Label layoutX="650.0" layoutY="150.0" text="Published Results: 8" />
-        <TableView layoutX="50.0" layoutY="190.0" prefHeight="200.0" prefWidth="820.0">
+        <Label layoutX="595.0" layoutY="150.0" text="Published Results: 8" />
+        <TableView fx:id="admindashboardtableview" layoutX="29.0" layoutY="202.0" prefHeight="200.0" prefWidth="611.0">
             <columns>
-                <TableColumn prefWidth="200.0" text="Recent Activity" />
-                <TableColumn prefWidth="150.0" text="Type" />
-                <TableColumn prefWidth="120.0" text="Date" />
-                <TableColumn prefWidth="150.0" text="Status" />
-                <TableColumn prefWidth="100.0" text="Priority" />
-                <TableColumn prefWidth="100.0" text="Actions" />
+                <TableColumn fx:id="recentactivitycol" prefWidth="112.00006103515625" text="Recent Activity" />
+                <TableColumn fx:id="typecol" prefWidth="87.20001220703125" text="Type" />
+                <TableColumn fx:id="datecol" prefWidth="102.4000244140625" text="Date" />
+                <TableColumn fx:id="statuscol" prefWidth="96.79998779296875" text="Status" />
+                <TableColumn fx:id="prioritycol" prefWidth="104.7999267578125" text="Priority" />
+            <TableColumn fx:id="actionscol" prefWidth="104.7999267578125" text="Actions" />
             </columns>
         </TableView>
-        <Button layoutX="50.0" layoutY="410.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="150.0" text="View All Applications" />
-        <Button layoutX="220.0" layoutY="410.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="150.0" text="Pending Approvals" />
-        <Button layoutX="390.0" layoutY="410.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="150.0" text="System Reports" />
-        <Button layoutX="560.0" layoutY="410.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="150.0" text="Manage Exams" />
+        <Button layoutX="50.0" layoutY="410.0" mnemonicParsing="false" onAction="#viewallapplicationsbuttononaction" prefHeight="35.0" prefWidth="150.0" text="View All Applications" />
+        <Button layoutX="220.0" layoutY="410.0" mnemonicParsing="false" onAction="#pendingapprovalsbuttononaction" prefHeight="35.0" prefWidth="150.0" text="Pending Approvals" />
+        <Button layoutX="390.0" layoutY="410.0" mnemonicParsing="false" onAction="#systemreportsbuttononaction" prefHeight="35.0" prefWidth="150.0" text="System Reports" />
+        <Button layoutX="560.0" layoutY="410.0" mnemonicParsing="false" onAction="#manageexamsbuttononaction" prefHeight="35.0" prefWidth="119.0" text="Manage Exams" />
         <Label layoutX="50.0" layoutY="470.0" text="System Alerts:">
             <font>
                 <Font name="System Bold" size="14.0" />

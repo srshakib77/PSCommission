@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="547.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pscommission.Tasmia.adminadminViewBasicAnalyticsViewController">
+<AnchorPane prefHeight="547.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pscommission.Tasmia.adminadminViewBasicAnalyticsViewController">
     <children>
         <Label layoutX="380.0" layoutY="30.0" text="View Basic Analytics">
             <font>
@@ -27,12 +27,12 @@
             </font>
         </Label>
         <Label layoutX="50.0" layoutY="140.0" text="Date Range:" />
-        <DatePicker layoutX="130.0" layoutY="135.0" prefHeight="30.0" prefWidth="120.0" />
+        <DatePicker fx:id="daterangetextfield" layoutX="130.0" layoutY="135.0" prefHeight="30.0" prefWidth="120.0" />
         <Label layoutX="260.0" layoutY="140.0" text="to" />
-        <DatePicker layoutX="280.0" layoutY="135.0" prefHeight="30.0" prefWidth="120.0" />
+        <DatePicker fx:id="daterange2textfield" layoutX="280.0" layoutY="135.0" prefHeight="30.0" prefWidth="120.0" />
         <Label layoutX="420.0" layoutY="140.0" text="Exam Category:" />
-        <ComboBox layoutX="520.0" layoutY="135.0" prefHeight="30.0" prefWidth="150.0" promptText="Select category" />
-        <Button layoutX="690.0" layoutY="135.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Generate Report" />
+        <ComboBox fx:id="examcategorycombobox" layoutX="520.0" layoutY="135.0" prefHeight="30.0" prefWidth="150.0" promptText="Select category" />
+        <Button layoutX="690.0" layoutY="135.0" mnemonicParsing="false" onAction="#generatereportbuttononaction" prefHeight="30.0" prefWidth="100.0" text="Generate Report" />
         <Label layoutX="50.0" layoutY="190.0" text="Key Performance Indicators:">
             <font>
                 <Font name="System Bold" size="14.0" />
@@ -51,23 +51,23 @@
                 <Font name="System Bold" size="14.0" />
             </font>
         </Label>
-        <TableView layoutX="50.0" layoutY="320.0" prefHeight="150.0" prefWidth="820.0">
+        <TableView fx:id="detailedanalyticstableview" layoutX="50.0" layoutY="320.0" prefHeight="150.0" prefWidth="820.0">
             <columns>
-                <TableColumn prefWidth="150.0" text="Exam Name" />
-                <TableColumn prefWidth="100.0" text="Applications" />
-                <TableColumn prefWidth="80.0" text="Appeared" />
-                <TableColumn prefWidth="80.0" text="Passed" />
-                <TableColumn prefWidth="80.0" text="Pass Rate %" />
-                <TableColumn prefWidth="100.0" text="Avg. Score" />
-                <TableColumn prefWidth="80.0" text="Highest" />
-                <TableColumn prefWidth="80.0" text="Lowest" />
-                <TableColumn prefWidth="70.0" text="Status" />
+                <TableColumn fx:id="examnamecol" prefWidth="150.0" text="Exam Name" />
+                <TableColumn fx:id="applicationscol" prefWidth="100.0" text="Applications" />
+                <TableColumn fx:id="appearedcol" prefWidth="80.0" text="Appeared" />
+                <TableColumn fx:id="passedcol" prefWidth="80.0" text="Passed" />
+                <TableColumn fx:id="passratecol" prefWidth="80.0" text="Pass Rate %" />
+                <TableColumn fx:id="avgscorecol" prefWidth="100.0" text="Avg. Score" />
+                <TableColumn fx:id="highestcol" prefWidth="80.0" text="Highest" />
+                <TableColumn fx:id="lowestcol" prefWidth="80.0" text="Lowest" />
+                <TableColumn fx:id="status" prefWidth="70.0" text="Status" />
             </columns>
         </TableView>
-        <Button layoutX="50.0" layoutY="490.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" text="Export Data" />
-        <Button layoutX="190.0" layoutY="490.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" text="Print Report" />
-        <Button layoutX="330.0" layoutY="490.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" text="Advanced Analytics" />
-        <Button layoutX="470.0" layoutY="490.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" text="Schedule Report" />
-        <Button layoutX="610.0" layoutY="490.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" text="Refresh Data" />
+        <Button layoutX="50.0" layoutY="490.0" mnemonicParsing="false" onAction="#exportdatabuttononaction" prefHeight="35.0" prefWidth="120.0" text="Export Data" />
+        <Button layoutX="190.0" layoutY="490.0" mnemonicParsing="false" onAction="#printreportbuttononaction" prefHeight="35.0" prefWidth="120.0" text="Print Report" />
+        <Button layoutX="330.0" layoutY="490.0" mnemonicParsing="false" onAction="#advancedanalyticsbuttononaction" prefHeight="35.0" prefWidth="120.0" text="Advanced Analytics" />
+        <Button layoutX="470.0" layoutY="490.0" mnemonicParsing="false" onAction="#schedulereportbuttononaction" prefHeight="35.0" prefWidth="120.0" text="Schedule Report" />
+        <Button layoutX="610.0" layoutY="490.0" mnemonicParsing="false" onAction="#refreshdatabuttononaction" prefHeight="35.0" prefWidth="120.0" text="Refresh Data" />
     </children>
 </AnchorPane>

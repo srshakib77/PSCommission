@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="547.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pscommission.Tasmia.adminadminApproveRejectApplicationsViewController">
+<AnchorPane prefHeight="547.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pscommission.Tasmia.adminadminApproveRejectApplicationsViewController">
     <children>
         <Label layoutX="340.0" layoutY="30.0" text="Approve or Reject Applications">
             <font>
@@ -21,15 +21,15 @@
                 <Font name="System Bold" size="14.0" />
             </font>
         </Label>
-        <TableView layoutX="50.0" layoutY="110.0" prefHeight="200.0" prefWidth="820.0">
+        <TableView fx:id="pendingapplicationforreviewlistview" layoutX="50.0" layoutY="110.0" prefHeight="200.0" prefWidth="820.0">
             <columns>
-                <TableColumn prefWidth="120.0" text="Application ID" />
-                <TableColumn prefWidth="150.0" text="Candidate Name" />
-                <TableColumn prefWidth="150.0" text="Exam Name" />
-                <TableColumn prefWidth="100.0" text="Submitted Date" />
-                <TableColumn prefWidth="100.0" text="Priority" />
-                <TableColumn prefWidth="100.0" text="Documents" />
-                <TableColumn prefWidth="100.0" text="Actions" />
+                <TableColumn fx:id="applicationidcol" prefWidth="120.0" text="Application ID" />
+                <TableColumn fx:id="candidatenamecol" prefWidth="150.0" text="Candidate Name" />
+                <TableColumn fx:id="examnamecol" prefWidth="150.0" text="Exam Name" />
+                <TableColumn fx:id="submitteddatecol" prefWidth="100.0" text="Submitted Date" />
+                <TableColumn fx:id="prioritycol" prefWidth="100.0" text="Priority" />
+                <TableColumn fx:id="documentscol" prefWidth="100.0" text="Documents" />
+                <TableColumn fx:id="actionscol" prefWidth="100.0" text="Actions" />
             </columns>
         </TableView>
         <Label layoutX="50.0" layoutY="330.0" text="Application Review:">
@@ -38,17 +38,17 @@
             </font>
         </Label>
         <Label layoutX="50.0" layoutY="360.0" text="Application ID:" />
-        <TextField layoutX="150.0" layoutY="355.0" prefHeight="30.0" prefWidth="150.0" />
+        <TextField fx:id="applicationidtextfield" layoutX="150.0" layoutY="355.0" prefHeight="30.0" prefWidth="150.0" />
         <Label layoutX="320.0" layoutY="360.0" text="Candidate Name:" />
-        <TextField layoutX="430.0" layoutY="355.0" editable="false" prefHeight="30.0" prefWidth="200.0" />
+        <TextField fx:id="candidatenametextfield" editable="false" layoutX="430.0" layoutY="355.0" prefHeight="30.0" prefWidth="200.0" />
         <Label layoutX="50.0" layoutY="400.0" text="Review Comments:" />
-        <TextArea layoutX="50.0" layoutY="420.0" prefHeight="60.0" prefWidth="580.0" promptText="Enter review comments or reason for rejection" />
-        <Button layoutX="650.0" layoutY="420.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" text="Approve" />
-        <Button layoutX="650.0" layoutY="465.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" text="Reject" />
-        <Button layoutX="770.0" layoutY="420.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" text="Hold for Review" />
-        <Button layoutX="770.0" layoutY="465.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" text="Request Info" />
-        <Button layoutX="50.0" layoutY="500.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" text="View Documents" />
-        <Button layoutX="190.0" layoutY="500.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" text="Bulk Approve" />
-        <Button layoutX="330.0" layoutY="500.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" text="Generate Report" />
+        <TextArea fx:id="reviewcommentstextarea" layoutX="50.0" layoutY="420.0" prefHeight="60.0" prefWidth="580.0" promptText="Enter review comments or reason for rejection" />
+        <Button layoutX="650.0" layoutY="420.0" mnemonicParsing="false" onAction="#approvebuttononaction" prefHeight="35.0" prefWidth="100.0" text="Approve" />
+        <Button layoutX="650.0" layoutY="465.0" mnemonicParsing="false" onAction="#rejectbuttononaction" prefHeight="35.0" prefWidth="100.0" text="Reject" />
+        <Button layoutX="770.0" layoutY="420.0" mnemonicParsing="false" onAction="#holdforreviewbuttononaction" prefHeight="35.0" prefWidth="100.0" text="Hold for Review" />
+        <Button layoutX="770.0" layoutY="465.0" mnemonicParsing="false" onAction="#requestinfobuttononaction" prefHeight="35.0" prefWidth="100.0" text="Request Info" />
+        <Button layoutX="50.0" layoutY="500.0" mnemonicParsing="false" onAction="#viewdocumentbuttononaction" prefHeight="35.0" prefWidth="120.0" text="View Documents" />
+        <Button layoutX="190.0" layoutY="500.0" mnemonicParsing="false" onAction="#bulkapprovebuttononaction" prefHeight="35.0" prefWidth="120.0" text="Bulk Approve" />
+        <Button layoutX="330.0" layoutY="500.0" mnemonicParsing="false" onAction="#generatereportbuttononaction" prefHeight="35.0" prefWidth="120.0" text="Generate Report" />
     </children>
 </AnchorPane>

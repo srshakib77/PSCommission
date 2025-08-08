@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="547.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pscommission.Tasmia.adminadminPostJobCircularViewController">
+<AnchorPane prefHeight="547.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pscommission.Tasmia.adminadminPostJobCircularViewController">
     <children>
         <Label layoutX="380.0" layoutY="30.0" text="Post a Job Circular">
             <font>
@@ -22,29 +22,29 @@
             </font>
         </Label>
         <Label layoutX="50.0" layoutY="110.0" text="Job Title:" />
-        <TextField layoutX="120.0" layoutY="105.0" prefHeight="30.0" prefWidth="300.0" />
+        <TextField fx:id="jobtitletextfield" layoutX="120.0" layoutY="105.0" prefHeight="30.0" prefWidth="300.0" />
         <Label layoutX="450.0" layoutY="110.0" text="Job Category:" />
-        <ComboBox layoutX="540.0" layoutY="105.0" prefHeight="30.0" prefWidth="180.0" promptText="Select category" />
+        <ComboBox fx:id="jobcatagorycombobox" layoutX="540.0" layoutY="105.0" prefHeight="30.0" prefWidth="180.0" promptText="Select category" />
         <Label layoutX="50.0" layoutY="150.0" text="Department:" />
         <TextField layoutX="130.0" layoutY="145.0" prefHeight="30.0" prefWidth="200.0" />
         <Label layoutX="350.0" layoutY="150.0" text="Total Positions:" />
-        <TextField layoutX="450.0" layoutY="145.0" prefHeight="30.0" prefWidth="100.0" />
+        <TextField fx:id="totalpositiontextfield" layoutX="450.0" layoutY="145.0" prefHeight="30.0" prefWidth="100.0" />
         <Label layoutX="570.0" layoutY="150.0" text="Salary Range:" />
-        <TextField layoutX="660.0" layoutY="145.0" prefHeight="30.0" prefWidth="150.0" />
+        <TextField fx:id="salaryrangetextfield" layoutX="660.0" layoutY="145.0" prefHeight="30.0" prefWidth="150.0" />
         <Label layoutX="50.0" layoutY="190.0" text="Job Description:" />
-        <TextArea layoutX="50.0" layoutY="210.0" prefHeight="80.0" prefWidth="820.0" promptText="Enter detailed job description" />
+        <TextArea fx:id="jobdescriptiontextarea" layoutX="50.0" layoutY="210.0" prefHeight="80.0" prefWidth="820.0" promptText="Enter detailed job description" />
         <Label layoutX="50.0" layoutY="310.0" text="Eligibility Criteria:" />
-        <TextArea layoutX="50.0" layoutY="330.0" prefHeight="60.0" prefWidth="820.0" promptText="Enter eligibility requirements" />
+        <TextArea fx:id="eligibilitycriteriatextarea" layoutX="50.0" layoutY="330.0" prefHeight="60.0" prefWidth="820.0" promptText="Enter eligibility requirements" />
         <Label layoutX="50.0" layoutY="410.0" text="Application Deadline:" />
-        <DatePicker layoutX="180.0" layoutY="405.0" prefHeight="30.0" prefWidth="150.0" />
+        <DatePicker fx:id="applicationdeadlinetextfield" layoutX="180.0" layoutY="405.0" prefHeight="30.0" prefWidth="150.0" />
         <Label layoutX="350.0" layoutY="410.0" text="Exam Date:" />
-        <DatePicker layoutX="420.0" layoutY="405.0" prefHeight="30.0" prefWidth="150.0" />
+        <DatePicker fx:id="examdatetextfield" layoutX="420.0" layoutY="405.0" prefHeight="30.0" prefWidth="150.0" />
         <Label layoutX="590.0" layoutY="410.0" text="Application Fee:" />
-        <TextField layoutX="690.0" layoutY="405.0" prefHeight="30.0" prefWidth="100.0" />
-        <Button layoutX="50.0" layoutY="460.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" text="Save as Draft" />
-        <Button layoutX="190.0" layoutY="460.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" text="Preview Circular" />
-        <Button layoutX="330.0" layoutY="460.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" text="Publish Circular" />
-        <Button layoutX="470.0" layoutY="460.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" text="Upload Documents" />
-        <Button layoutX="610.0" layoutY="460.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" text="Clear Form" />
+        <TextField fx:id="applicationtextfield" layoutX="690.0" layoutY="405.0" prefHeight="30.0" prefWidth="100.0" />
+        <Button layoutX="50.0" layoutY="460.0" mnemonicParsing="false" onAction="#saveasdraftbuttononaction" prefHeight="35.0" prefWidth="120.0" text="Save as Draft" />
+        <Button layoutX="190.0" layoutY="460.0" mnemonicParsing="false" onAction="#previewcircularbuttononaction" prefHeight="35.0" prefWidth="120.0" text="Preview Circular" />
+        <Button layoutX="330.0" layoutY="460.0" mnemonicParsing="false" onAction="#publishcircularbuttononaction" prefHeight="35.0" prefWidth="120.0" text="Publish Circular" />
+        <Button layoutX="470.0" layoutY="460.0" mnemonicParsing="false" onAction="#uploaddocumentsbuttononaction" prefHeight="35.0" prefWidth="120.0" text="Upload Documents" />
+        <Button layoutX="610.0" layoutY="460.0" mnemonicParsing="false" onAction="#clearformbuttononaction" prefHeight="35.0" prefWidth="120.0" text="Clear Form" />
     </children>
 </AnchorPane>
