@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="489.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pscommission.FinanceOfficerShakib.UpdateFeeStructureController">
+   <children>
+      <Label layoutX="162.0" layoutY="22.0" prefHeight="37.0" prefWidth="275.0" text="Fee Structure Management">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="61.0" layoutY="80.0" prefHeight="26.0" prefWidth="140.0" text="Current Fee Structure:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="TableView" layoutX="58.0" layoutY="120.0" prefHeight="235.0" prefWidth="453.0">
+        <columns>
+          <TableColumn fx:id="ExamTypeCol" prefWidth="138.66665649414062" text="Exam Type" />
+          <TableColumn fx:id="CurrentTypeCol" prefWidth="150.66668701171875" text="Current Type" />
+            <TableColumn fx:id="NewFeeCol" prefWidth="163.33331298828125" text="New Fee" />
+        </columns>
+      </TableView>
+      <Button layoutX="124.0" layoutY="384.0" mnemonicParsing="false" onAction="#handleSaveChangesButton" text="Save Changes" />
+      <Button layoutX="242.0" layoutY="384.0" mnemonicParsing="false" onAction="#handlePublishUpdatesButton" text="Publish Updates" />
+      <Button layoutX="364.0" layoutY="384.0" mnemonicParsing="false" onAction="#handleCancelButton" text="Cancel" />
+      <Button layoutX="465.0" layoutY="449.0" mnemonicParsing="false" onAction="#handleBackToHomeButton" text="Back To Home" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="352.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pscommission.PaperModeratorShakib.UploadQuestionSetController">
+   <children>
+      <Label layoutX="182.0" layoutY="22.0" text="Question Set Upload">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="78.0" text="Upload New Question Set">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="124.0" text="Subject:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="160.0" text="Exam Level:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="198.0" text="Question File:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="SubjectComboBox" layoutX="127.0" layoutY="122.0" prefWidth="150.0" />
+      <ComboBox fx:id="ExamlevelComboBox" layoutX="141.0" layoutY="158.0" prefWidth="150.0" />
+      <TextField fx:id="QuestionFileTextField" layoutX="158.0" layoutY="196.0" />
+      <Button layoutX="321.0" layoutY="195.0" mnemonicParsing="false" onAction="#handleBrowseButton" text="Browse.." />
+      <Button layoutX="55.0" layoutY="254.0" mnemonicParsing="false" onAction="#handleUploadQuestionsButton" text="Upload Questions" />
+      <Button layoutX="402.0" layoutY="305.0" mnemonicParsing="false" onAction="#handleBackToHomeButton" text="Back To Home" />
+   </children>
+</AnchorPane>
