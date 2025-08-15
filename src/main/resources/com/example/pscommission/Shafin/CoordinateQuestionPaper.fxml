@@ -1,38 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.geometry.Insets?>
 
-<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="your.package.CoordinateQuestionPaperController"
-      spacing="10" alignment="TOP_CENTER">
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.pscommission.Shafin.CoordinateQuestionPaper"
+            prefHeight="400.0" prefWidth="600.0" >
 
-    <padding>
-        <Insets top="20" right="20" bottom="20" left="20"/>
-    </padding>
-
-    <Label text="Coordinate Question Paper" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
-
-    <!-- Step 2: Upload/Draft question papers -->
-    <Label text="Upload Question Paper Draft" />
-    <TextField fx:id="txtDraftTitle" promptText="Title of the draft" />
-    <Button text="Upload Draft" fx:id="btnUploadDraft" />
-
-    <!-- Step 3: Send to reviewers -->
-    <Label fx:id="lblSendReviewers" text="Draft sent to reviewers successfully." />
-
-    <!-- Step 4: Finalize Papers -->
-    <Label text="Finalize Question Paper" />
-    <TextArea fx:id="txtFinalPaper" promptText="Enter final version here..." prefRowCount="4" />
-    <Button text="Finalize and Save" fx:id="btnFinalize" />
-
-    <!-- Step 5: Distribute to centers -->
-    <Button text="Distribute to Exam Centers" fx:id="btnDistribute" />
-
-    <!-- Step 6: Return to Dashboard -->
-    <Button text="Return to Dashboard" fx:id="btnReturn" style="-fx-background-color: #ccccff;" />
-
-</VBox>
-
-
+</AnchorPane>
