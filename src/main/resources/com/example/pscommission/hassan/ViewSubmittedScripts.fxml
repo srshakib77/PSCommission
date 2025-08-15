@@ -1,14 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.gluonhq.charm.glisten.mvc.SplashView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="CONTROLLER_NAME"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="516.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+   <children>
+      <Label layoutX="38.0" layoutY="27.0" prefHeight="27.0" prefWidth="206.0" text="View Submitted Scripts">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="examsessioncombobox" layoutX="175.0" layoutY="85.0" prefHeight="26.0" prefWidth="166.0" />
+      <TableView fx:id="tableviewcol" layoutX="38.0" layoutY="200.0" prefHeight="200.0" prefWidth="524.0">
+        <columns>
+          <TableColumn fx:id="scriptsidcol" prefWidth="75.0" text="Scripts ID" />
+          <TableColumn fx:id="studentnamecol" prefWidth="104.800048828125" text="Student name" />
+            <TableColumn fx:id="subjectcol" prefWidth="102.39996337890625" text="Subject" />
+            <TableColumn fx:id="SubmissionDatecol" prefWidth="123.199951171875" text="Submission Date" />
+            <TableColumn fx:id="Actionscol" prefWidth="120.79998779296875" text="Actions" />
+        </columns>
+      </TableView>
+      <Label layoutX="38.0" layoutY="89.0" text="Select Exam Session:" />
+      <Button fx:id="handelloadscriptsbutton" layoutX="377.0" layoutY="85.0" mnemonicParsing="false" onAction="#handelloadscriptsbutton" prefHeight="26.0" prefWidth="90.0" text="Load Scripts" />
+      <Button fx:id="handleBackToHomebutton" layoutX="469.0" layoutY="454.0" mnemonicParsing="false" onAction="#handelbacktohome" text="Back To Home" />
+      <SplashView />
+      <Label layoutX="38.0" layoutY="136.0" text="Submitted Scripts:">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+   </children>
 </AnchorPane>
