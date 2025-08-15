@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="467.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pscommission.Shakib.GeneratePaymentReportController">
+<AnchorPane prefHeight="467.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pscommission.FinanceOfficerShakib.GeneratePaymentReportController">
    <children>
       <Label layoutX="125.0" layoutY="30.0" text="Generate Payment Report">
          <font>

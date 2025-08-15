@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="497.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pscommission.Shakib.PaperModeratorDashboardController">
+<AnchorPane prefHeight="497.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pscommission.PaperModeratorShakib.PaperModeratorDashboardController">
    <children>
       <Label layoutX="173.0" layoutY="24.0" text="Paper Moderator Dashboard">
          <font>

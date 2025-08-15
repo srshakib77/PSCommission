@@ -1,4 +1,4 @@
-package com.example.pscommission.Shakib;
+package com.example.pscommission.PaperModeratorShakib;
 
 public class CreateQuestionBankController
 {

@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="433.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pscommission.Shakib.ModerateMarkingSchemeController">
+<AnchorPane prefHeight="433.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pscommission.PaperModeratorShakib.ModerateMarkingSchemeController">
    <children>
       <Label layoutX="156.0" layoutY="14.0" text="Moderate marking Scheme">
          <font>
