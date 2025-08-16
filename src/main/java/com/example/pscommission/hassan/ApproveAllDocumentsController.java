@@ -1,5 +1,9 @@
 package com.example.pscommission.hassan;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.Button;
+import javafx.scene.layout.VBox;
+
 public class ApproveAllDocumentsController
 {
     @javafx.fxml.FXML

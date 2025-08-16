@@ -1,5 +1,9 @@
 package com.example.pscommission.hassan;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
+
 public class EvaluateAnswerScriptController
 {
     @javafx.fxml.FXML

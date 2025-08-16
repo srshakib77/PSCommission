@@ -1,5 +1,10 @@
 package com.example.pscommission.hassan;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
+
 public class VerifyNIDInformationController
 {
     @javafx.fxml.FXML

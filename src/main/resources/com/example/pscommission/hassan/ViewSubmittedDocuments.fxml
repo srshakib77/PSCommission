@@ -24,7 +24,7 @@
       <Button layoutX="75.0" layoutY="368.0" mnemonicParsing="false" onAction="#handlerefreshApplicantsList" text="Refresh List" />
       <Button layoutX="394.0" layoutY="173.0" mnemonicParsing="false" onAction="#loadNextApplicant" text="Next Applicant" />
       <ListView fx:id="applicantsListView" layoutX="72.0" layoutY="114.0" prefHeight="231.0" prefWidth="138.0" />
-      <ScrollPane layoutX="266.0" layoutY="114.0" prefHeight="27.0" prefWidth="200.0" />
+      <ScrollPane fx:id="sumitteddocumentsfeild" layoutX="266.0" layoutY="114.0" prefHeight="27.0" prefWidth="200.0" />
       <Button layoutX="378.0" layoutY="368.0" mnemonicParsing="false" onAction="#handlebacktohomebutton" text="Back To Home" />
    </children>
 </AnchorPane>
