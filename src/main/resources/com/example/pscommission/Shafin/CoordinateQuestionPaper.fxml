@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
 
-<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="your.package.CoordinateQuestionPaperController"
-      spacing="10" alignment="TOP_CENTER">
+<VBox alignment="TOP_CENTER" spacing="10" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="your.package.Goal2CoordinateQuestionPaperController">
 
     <padding>
-        <Insets top="20" right="20" bottom="20" left="20"/>
+        <Insets bottom="20" left="20" right="20" top="20" />
     </padding>
 
-    <Label text="Coordinate Question Paper" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+    <!-- Title -->
+    <Label fx:id="txtCoordinateQuestionPaper" style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Coordinate Question Paper" />
 
-    <!-- Step 2: Upload/Draft question papers -->
-    <Label text="Upload Question Paper Draft" />
-    <TextField fx:id="txtDraftTitle" promptText="Title of the draft" />
-    <Button text="Upload Draft" fx:id="btnUploadDraft" />
+    <!-- Step 2: Collect Question Paper Drafts -->
+    <Label fx:id="txtUploadQuestionPaper" text="Upload Question Paper Draft:" />
+    <TextField fx:id="txtDraftTitle" promptText="Enter draft title" />
+    <Button fx:id="btnUploadDraft" onAction="#handleUploadDraft" text="Upload Draft" />
 
-    <!-- Step 3: Send to reviewers -->
-    <Label fx:id="lblSendReviewers" text="Draft sent to reviewers successfully." />
+    <!-- Step 3: Send to Reviewers -->
+    <Label fx:id="lblReviewStatus" style="-fx-font-style: italic;" text="Review Status: Pending" />
 
-    <!-- Step 4: Finalize Papers -->
-    <Label text="Finalize Question Paper" />
-    <TextArea fx:id="txtFinalPaper" promptText="Enter final version here..." prefRowCount="4" />
-    <Button text="Finalize and Save" fx:id="btnFinalize" />
+    <!-- Step 4: Finalize Question Papers -->
+    <Label fx:id="txtFinalizeQuestionPaper" text="Finalize Question Paper:" />
+    <TextArea fx:id="txtFinalPaper" prefRowCount="4" promptText="Enter final version here" />
+    <Button fx:id="btnSaveFinal" onAction="#handleSaveFinalPaper" text="Save Final Paper" />
 
-    <!-- Step 5: Distribute to centers -->
-    <Button text="Distribute to Exam Centers" fx:id="btnDistribute" />
+    <!-- Step 5: Distribute to Centers -->
+    <Button fx:id="btnDistribute" onAction="#handleDistributePapers" text="Distribute to Exam Centers" />
 
     <!-- Step 6: Return to Dashboard -->
-    <Button text="Return to Dashboard" fx:id="btnReturn" style="-fx-background-color: #ccccff;" />
+    <Button fx:id="btnReturn" onAction="#handleReturnToDashboard" style="-fx-background-color: #ccccff;" text="Return to Dashboard" />
 
 </VBox>
-
-

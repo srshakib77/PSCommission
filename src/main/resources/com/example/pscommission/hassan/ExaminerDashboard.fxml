@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="handleSubmitFinalScoreSheetbutton" prefHeight="400.0" prefWidth="590.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pscommission.hassan.ExaminerDashboardController">
+   <children>
+      <Label layoutX="207.0" layoutY="56.0" prefHeight="26.0" prefWidth="175.0" text="   Examiner Dashboard">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="handleViewSubmittedScriptsbutton" layoutX="79.0" layoutY="132.0" mnemonicParsing="false" onAction="#handleViewSubmittedScriptsbutton" text="View Submitted Scripts " />
+      <Button fx:id="handleGenerateEvaluationReport" layoutX="355.0" layoutY="302.0" mnemonicParsing="false" onAction="#handleGenerateEvaluationReport" text="Generate Evaluation Report " />
+      <Button fx:id="handleaddgeneralfeedbackbutton" layoutX="355.0" layoutY="246.0" mnemonicParsing="false" onAction="#handleGenerateEvaluationReport" text="Add General Feedback" />
+      <Button fx:id="handleRervaluateFlaggedScriptbutton" layoutX="355.0" layoutY="187.0" mnemonicParsing="false" onAction="#handleRervaluateFlaggedScriptbutton" text="Re-evaluate Flagged Script" />
+      <Button fx:id="handlesubmitfinalscoresheet" layoutX="355.0" layoutY="132.0" mnemonicParsing="false" onAction="#handlesubmitfinalscoresheet" text="Submit Final Score Sheet" />
+      <Button fx:id="handleFilterScriptsbyStatusbutton" layoutX="79.0" layoutY="302.0" mnemonicParsing="false" onAction="#handleUpdateEvaluationbutton" text=" Filter Scripts by Status " />
+      <Button fx:id="handleUpdateEvaluationbutton" layoutX="79.0" layoutY="246.0" mnemonicParsing="false" onAction="#handleUpdateEvaluationbutton" text="Update Evaluation" />
+      <Button fx:id="handleEvaluateAnswerScriptbutton" layoutX="79.0" layoutY="187.0" mnemonicParsing="false" onAction="#handleViewSubmittedScriptsbutton" text="Evaluate Answer Script" />
+      <Button layoutX="249.0" layoutY="348.0" mnemonicParsing="false" onAction="#handlebacktohomebutton" text="Back To Home" />
+   </children>
+</AnchorPane>

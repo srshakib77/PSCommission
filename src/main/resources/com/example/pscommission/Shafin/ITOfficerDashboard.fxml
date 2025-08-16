@@ -5,23 +5,34 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="TOP_CENTER" prefHeight="457.0" prefWidth="570.0" spacing="10.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="your.package.ITOfficerDashboardController">
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="your.package.ITOfficerDashboardController"
+      alignment="TOP_CENTER"
+      spacing="12">
 
     <padding>
-        <Insets bottom="20" left="20" right="20" top="20" />
+        <Insets top="20" right="20" bottom="20" left="20"/>
     </padding>
 
-    <Label style="-fx-font-size: 20px; -fx-font-weight: bold;" text="IT Officer Dashboard" />
+    <!-- Header -->
+    <Label text="IT Officer Dashboard"
+           style="-fx-font-size: 22px; -fx-font-weight: bold;" />
 
-    <Button fx:id="btnGoal1" text="1. Maintain Candidate Database" />
-    <Button fx:id="btnGoal2" text="2. Secure PSC Online Systems" />
-    <Button fx:id="btnGoal3" text="3. Manage Application Portal" />
-    <Button fx:id="btnGoal4" text="4. Generate IT System Reports" />
-    <Button fx:id="btnGoal5" text="5. Provide Technical Support" />
-    <Button fx:id="btnGoal6" text="6. Backup and Recovery of Data" />
-    <Button fx:id="btnGoal7" text="7. Upgrade Software Systems" />
-    <Button fx:id="btnGoal8" text="8. Monitor Network Performance" />
+    <!-- Goal Buttons -->
+    <Button text="1. Maintain Candidate Database" fx:id="btnGoal1" onAction="#openGoal1"/>
+    <Button text="2. Secure PSC Online Systems" fx:id="btnGoal2" onAction="#openGoal2"/>
+    <Button text="3. Manage Application Portal" fx:id="btnGoal3" onAction="#openGoal3"/>
+    <Button text="4. Generate IT System Reports" fx:id="btnGoal4" onAction="#openGoal4"/>
+    <Button text="5. Provide Technical Support" fx:id="btnGoal5" onAction="#openGoal5"/>
+    <Button text="6. Backup and Recovery of Data" fx:id="btnGoal6" onAction="#openGoal6"/>
+    <Button text="7. Upgrade Software Systems" fx:id="btnGoal7" onAction="#openGoal7"/>
+    <Button text="8. Monitor Network Performance" fx:id="btnGoal8" onAction="#openGoal8"/>
 
-    <Button fx:id="btnSignOut" style="-fx-background-color: #ff4c4c; -fx-text-fill: white;" text="Sign Out" />
+    <!-- Sign Out -->
+    <Button text="Sign Out" fx:id="btnSignOut"
+            style="-fx-background-color: #ff4c4c; -fx-text-fill: white;"
+            onAction="#signOut" />
 
 </VBox>
+
