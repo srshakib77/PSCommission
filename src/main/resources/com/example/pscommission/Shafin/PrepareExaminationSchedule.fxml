@@ -1,14 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.pscommission.Shafin.PrepareExaminationSchedule"
-            prefHeight="400.0" prefWidth="600.0" >
+<VBox alignment="TOP_CENTER" spacing="10" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="your.package.Goal1PrepareScheduleController">
 
-</AnchorPane>
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+
+    <!-- Title -->
+    <Label fx:id="prepareExaminationScheduleText" style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Prepare Examination Schedule" />
+
+    <!-- Step 2: Draft preliminary schedule -->
+    <Label fx:id="txtDraftPreliminarySchedule" text="Draft Preliminary Schedule:" />
+    <TextField fx:id="txtDraftSchedule" promptText="Enter preliminary schedule" />
+    <Button fx:id="btnSubmitDraft" onAction="#submitDraft" text="Submit Draft" />
+
+    <!-- Step 3: Collect inputs from departments -->
+    <Label fx:id="DepertmentInputsText" text="Department Inputs:" />
+    <TextArea fx:id="txtDeptInputs" editable="false" prefRowCount="3" promptText="Inputs from departments will appear here" />
+
+    <!-- Step 4: Finalize draft -->
+    <Label text="Finalize Schedule:" />
+    <TextArea fx:id="txtFinalSchedule" prefRowCount="4" promptText="Enter final version of schedule" />
+    <Button fx:id="btnSaveFinal" onAction="#saveFinalDraft" text="Save Final Draft" />
+
+    <!-- Step 5: Approval -->
+    <Label fx:id="lblApprovalStatus" style="-fx-font-style: italic;" text="Approval Status: Pending" />
+
+    <!-- Step 6: Publish schedule -->
+    <Button fx:id="btnPublish" onAction="#publishSchedule" text="Publish Schedule" />
+
+    <!-- Step 7: Return to Dashboard -->
+    <Button fx:id="btnReturn" onAction="#returnToDashboard" style="-fx-background-color: #ccccff;" text="Return to Dashboard" />
+
+</VBox>

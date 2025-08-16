@@ -1,14 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.pscommission.Shafin.SecurePSCOnlineSystems"
-            prefHeight="400.0" prefWidth="600.0">
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="your.package.Goal2SecurePSCSystemsController"
+      spacing="10" alignment="TOP_CENTER">
 
-</AnchorPane>
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <!-- Title -->
+    <Label text="Secure PSC Online Systems"
+           style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+    <!-- Step 2: Conduct Security Audit -->
+    <Label text="Security Audit Status:" />
+    <TextArea fx:id="txtAuditReport" promptText="Enter audit findings" prefRowCount="4" />
+    <Button text="Save Audit Report" fx:id="btnSaveAudit" onAction="#saveAuditReport" />
+
+    <!-- Step 3: Identify Vulnerabilities -->
+    <Label text="Identified Vulnerabilities:" />
+    <ListView fx:id="listVulnerabilities" prefHeight="100" />
+
+    <!-- Step 4: Apply Patches -->
+    <Label text="Patch Details:" />
+    <TextField fx:id="txtPatchDetails" promptText="Enter patch details" />
+    <Button text="Apply Patch" fx:id="btnApplyPatch" onAction="#applyPatch" />
+
+    <!-- Step 5: Test System -->
+    <Button text="Run System Test" fx:id="btnTestSystem" onAction="#testSystem" />
+
+    <!-- Step 6: Document Measures -->
+    <Label text="Security Measures Documentation:" />
+    <TextArea fx:id="txtDocumentation" promptText="Enter documentation" prefRowCount="3" />
+    <Button text="Save Documentation" fx:id="btnSaveDocumentation" onAction="#saveDocumentation" />
+
+    <!-- Return -->
+    <Button text="Return to Dashboard" fx:id="btnReturn"
+            style="-fx-background-color: #ccccff;" onAction="#returnToDashboard" />
+
+</VBox>
+

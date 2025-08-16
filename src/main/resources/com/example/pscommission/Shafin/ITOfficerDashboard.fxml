@@ -1,14 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.pscommission.Shafin.ITOfficerDashboard"
-            prefHeight="400.0" prefWidth="600.0" >
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="your.package.ITOfficerDashboardController"
+      alignment="TOP_CENTER"
+      spacing="12">
 
-</AnchorPane>
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <!-- Header -->
+    <Label text="IT Officer Dashboard"
+           style="-fx-font-size: 22px; -fx-font-weight: bold;" />
+
+    <!-- Goal Buttons -->
+    <Button text="1. Maintain Candidate Database" fx:id="btnGoal1" onAction="#openGoal1"/>
+    <Button text="2. Secure PSC Online Systems" fx:id="btnGoal2" onAction="#openGoal2"/>
+    <Button text="3. Manage Application Portal" fx:id="btnGoal3" onAction="#openGoal3"/>
+    <Button text="4. Generate IT System Reports" fx:id="btnGoal4" onAction="#openGoal4"/>
+    <Button text="5. Provide Technical Support" fx:id="btnGoal5" onAction="#openGoal5"/>
+    <Button text="6. Backup and Recovery of Data" fx:id="btnGoal6" onAction="#openGoal6"/>
+    <Button text="7. Upgrade Software Systems" fx:id="btnGoal7" onAction="#openGoal7"/>
+    <Button text="8. Monitor Network Performance" fx:id="btnGoal8" onAction="#openGoal8"/>
+
+    <!-- Sign Out -->
+    <Button text="Sign Out" fx:id="btnSignOut"
+            style="-fx-background-color: #ff4c4c; -fx-text-fill: white;"
+            onAction="#signOut" />
+
+</VBox>
+

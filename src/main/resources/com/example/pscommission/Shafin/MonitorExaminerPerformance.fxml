@@ -1,14 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.pscommission.Shafin.MonitorExaminerPerformance"
-            prefHeight="400.0" prefWidth="600.0" >
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="your.package.Goal5MonitorExaminerPerformanceController"
+      spacing="10" alignment="TOP_CENTER">
 
-</AnchorPane>
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <!-- Title -->
+    <Label text="Monitor Examiner Performance"
+           style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+    <!-- Step 2: Collect Examiner Reports -->
+    <Label text="Examiner Reports:" />
+    <ListView fx:id="listReports" prefHeight="120" prefWidth="250" />
+
+    <!-- Step 3: Analyze Reports -->
+    <Label text="Analysis Summary:" />
+    <TextArea fx:id="txtAnalysis" promptText="Enter analysis details here" prefRowCount="3" />
+
+    <!-- Step 4: Conduct Performance Review -->
+    <Label text="Performance Review Notes:" />
+    <TextArea fx:id="txtReviewNotes" promptText="Enter review notes here" prefRowCount="3" />
+
+    <!-- Step 5: Provide Feedback -->
+    <TextField fx:id="txtFeedback" promptText="Enter feedback for examiner" />
+    <Button text="Send Feedback" fx:id="btnSendFeedback" onAction="#sendFeedback" />
+
+    <!-- Step 6: Record Results -->
+    <Label fx:id="lblRecordStatus" text="Record Status: Pending" style="-fx-font-style: italic;" />
+
+    <!-- Step 7: Return -->
+    <Button text="Return to Dashboard" fx:id="btnReturn"
+            style="-fx-background-color: #ccccff;" onAction="#returnToDashboard" />
+
+</VBox>
