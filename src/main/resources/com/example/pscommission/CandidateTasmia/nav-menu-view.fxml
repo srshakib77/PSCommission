@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="250.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="600.0" prefWidth="250.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pscommission.navmenuViewController">
     <children>
         <VBox alignment="TOP_CENTER" layoutX="14.0" layoutY="14.0" prefHeight="600.0" prefWidth="250.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
@@ -20,7 +20,7 @@
                         <Insets bottom="10.0" top="20.0" />
                     </VBox.margin>
                     <image>
-                        <Image url="@../../../images/pscexamportal.png" />
+                        <Image url="@../../../../images/pscexamportal.png" />
                     </image>
                 </ImageView>
                 <Label text="PSC Exam Portal" textFill="WHITE">
@@ -60,7 +60,7 @@
                                         <Insets bottom="5.0" top="5.0" />
                                     </VBox.margin>
                                 </Label>
-                                <Button fx:id="candidateDashboardBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="230.0" style="-fx-background-color: transparent; -fx-border-color: transparent;" styleClass="menu-button" text="Dashboard" textFill="WHITE">
+                                <Button fx:id="candidateDashboardBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#dashboardbuttononaction" prefHeight="40.0" prefWidth="230.0" style="-fx-background-color: transparent; -fx-border-color: transparent;" styleClass="menu-button" text="Dashboard" textFill="WHITE">
                                     <font>
                                         <Font size="14.0" />
                                     </font>
@@ -68,7 +68,7 @@
                                         <Insets left="20.0" />
                                     </padding>
                                 </Button>
-                                <Button fx:id="candidateViewExamBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="230.0" style="-fx-background-color: transparent; -fx-border-color: transparent;" styleClass="menu-button" text="View Exams" textFill="WHITE">
+                                <Button fx:id="candidateViewExamBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#viewexamsbuttononaction" prefHeight="40.0" prefWidth="230.0" style="-fx-background-color: transparent; -fx-border-color: transparent;" styleClass="menu-button" text="View Exams" textFill="WHITE">
                                     <font>
                                         <Font size="14.0" />
                                     </font>
@@ -76,7 +76,7 @@
                                         <Insets left="20.0" />
                                     </padding>
                                 </Button>
-                                <Button fx:id="candidateApplyOnlineBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="230.0" style="-fx-background-color: transparent; -fx-border-color: transparent;" styleClass="menu-button" text="Apply Online" textFill="WHITE">
+                                <Button fx:id="candidateApplyOnlineBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#applyonlinebuttononaction" prefHeight="40.0" prefWidth="230.0" style="-fx-background-color: transparent; -fx-border-color: transparent;" styleClass="menu-button" text="Apply Online" textFill="WHITE">
                                     <font>
                                         <Font size="14.0" />
                                     </font>
@@ -84,7 +84,7 @@
                                         <Insets left="20.0" />
                                     </padding>
                                 </Button>
-                                <Button fx:id="candidatePayFeesBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="230.0" style="-fx-background-color: transparent; -fx-border-color: transparent;" styleClass="menu-button" text="Pay Fees" textFill="WHITE">
+                                <Button fx:id="candidatePayFeesBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#payfeesbuttononaction" prefHeight="40.0" prefWidth="230.0" style="-fx-background-color: transparent; -fx-border-color: transparent;" styleClass="menu-button" text="Pay Fees" textFill="WHITE">
                                     <font>
                                         <Font size="14.0" />
                                     </font>
@@ -92,7 +92,7 @@
                                         <Insets left="20.0" />
                                     </padding>
                                 </Button>
-                                <Button fx:id="candidateDownloadAdmitCardBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="230.0" style="-fx-background-color: transparent; -fx-border-color: transparent;" styleClass="menu-button" text="Download Admit Card" textFill="WHITE">
+                                <Button fx:id="candidateDownloadAdmitCardBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#downloadadmitcardbuttononaction" prefHeight="40.0" prefWidth="230.0" style="-fx-background-color: transparent; -fx-border-color: transparent;" styleClass="menu-button" text="Download Admit Card" textFill="WHITE">
                                     <font>
                                         <Font size="14.0" />
                                     </font>
@@ -100,7 +100,7 @@
                                         <Insets left="20.0" />
                                     </padding>
                                 </Button>
-                                <Button fx:id="candidateCheckExamDateBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="230.0" style="-fx-background-color: transparent; -fx-border-color: transparent;" styleClass="menu-button" text="Check Exam Date" textFill="WHITE">
+                                <Button fx:id="candidateCheckExamDateBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#checkexamdatebuttononaction" prefHeight="40.0" prefWidth="230.0" style="-fx-background-color: transparent; -fx-border-color: transparent;" styleClass="menu-button" text="Check Exam Date" textFill="WHITE">
                                     <font>
                                         <Font size="14.0" />
                                     </font>
@@ -108,7 +108,7 @@
                                         <Insets left="20.0" />
                                     </padding>
                                 </Button>
-                                <Button fx:id="candidateSeeResultsBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="230.0" style="-fx-background-color: transparent; -fx-border-color: transparent;" styleClass="menu-button" text="See Results" textFill="WHITE">
+                                <Button fx:id="candidateSeeResultsBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#seeresultsbuttononaction" prefHeight="40.0" prefWidth="230.0" style="-fx-background-color: transparent; -fx-border-color: transparent;" styleClass="menu-button" text="See Results" textFill="WHITE">
                                     <font>
                                         <Font size="14.0" />
                                     </font>
@@ -222,7 +222,7 @@
                     </VBox.margin>
                 </Separator>
 
-                <Button fx:id="logoutBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="230.0" style="-fx-background-color: transparent; -fx-border-color: transparent;" styleClass="menu-button" text="Logout" textFill="WHITE">
+                <Button fx:id="logoutBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#logoutbuttononaction" prefHeight="40.0" prefWidth="230.0" style="-fx-background-color: transparent; -fx-border-color: transparent;" styleClass="menu-button" text="Logout" textFill="WHITE">
                     <font>
                         <Font size="14.0" />
                     </font>
