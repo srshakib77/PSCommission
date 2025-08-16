@@ -1,4 +1,4 @@
-package com.example.pscommission.Tasmia;
+package com.example.pscommission.AdminTasmia;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
@@ -14,7 +14,7 @@ public class adminadminCreateExamScheduleViewController
     @javafx.fxml.FXML
     private TextField durationtextfield;
     @javafx.fxml.FXML
-    private ComboBox examtypecombobox;
+    private ComboBox  examtypecombobox;
     @javafx.fxml.FXML
     private TableView existingscheduleslistview;
     @javafx.fxml.FXML

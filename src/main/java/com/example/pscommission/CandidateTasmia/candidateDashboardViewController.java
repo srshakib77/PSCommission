@@ -1,4 +1,4 @@
-package com.example.pscommission.Tasmia;
+package com.example.pscommission.CandidateTasmia;
 
 public class candidateDashboardViewController
 {
