@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" spacing="10" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="your.package.Goal3ManageExamCentersController">
+
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+
+    <!-- Title -->
+    <Label fx:id="txtManageExaminationCenters" style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Manage Examination Centers" />
+
+    <!-- Step 2: Identify Centers -->
+    <Label fx:id="txtAvailableCenters" text="Available Centers:" />
+    <ListView fx:id="listCenters" prefHeight="120" prefWidth="250" />
+
+    <!-- Step 3: Inspect Facilities -->
+    <Label fx:id="txtInspectionNotes" text="Inspection Notes:" />
+    <TextArea fx:id="txtInspectionNotes" prefRowCount="3" promptText="Enter inspection notes" />
+
+    <!-- Step 4: Assign Center -->
+    <Label text="Assign Center:" />
+    <TextField fx:id="txtAssignCenter" promptText="Enter Center ID or Name" />
+    <Button fx:id="btnAssign" onAction="#handleAssignCenter" text="Assign Center" />
+
+    <!-- Step 5: Communicate Details -->
+    <Button fx:id="btnNotify" onAction="#handleSendNotification" text="Send Notification to Centers" />
+
+    <!-- Step 6: Monitor Centers -->
+    <Label fx:id="lblMonitoring" style="-fx-font-style: italic;" text="Monitoring Status: Not Started" />
+
+    <!-- Step 7: Return -->
+    <Button fx:id="btnReturn" onAction="#handleReturnToDashboard" style="-fx-background-color: #ccccff;" text="Return to Dashboard" />
+
+</VBox>
